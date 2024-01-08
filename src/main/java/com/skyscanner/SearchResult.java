@@ -6,27 +6,28 @@ public class SearchResult {
     @JsonProperty
     private String city;
     @JsonProperty
-    private String kind;
-    @JsonProperty
     private String title;
+    @JsonProperty
+    private String kind;
 
-    public SearchResult() {}
+    public SearchResult() {
+    }
 
-    public SearchResult(String city, String kind, String title) {
-        this.city= city;
-        this.kind = kind;
+    public SearchResult(String city, String title, String kind) {
+        this.city = city;
         this.title = title;
+        this.kind = kind;
     }
 
     public String getCity() {
-        return this.city;
-    }
-
-    public String getKind() {
-        return this.kind;
+        return city;
     }
 
     public String getTitle() {
-        return this.title;
+        return title;
+    }
+
+    public String getKind() {
+        return kind;
     }
 }

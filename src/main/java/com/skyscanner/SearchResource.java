@@ -16,19 +16,15 @@ import java.util.List;
 @Produces(MediaType.APPLICATION_JSON)
 public class SearchResource {
     List<SearchResult> searchResults;
-
     public SearchResource(List<SearchResult> searchResults) {
         this.searchResults = searchResults;
     }
 
     @POST
     public List<SearchResult> search(@NotNull @Valid Search search) {
-        // list to store any matching
-        List<SearchResult> response = new ArrayList<>();
-
-        // add matching ones
-        for(SearchResult result : searchResults) {
-            if(result.getCity().equals(search.getCity())) {
+        List<SearchResult> response = new ArrayList<SearchResult>();
+        for (SearchResult result : searchResults) {
+            if (result.getCity().equals(search.getCity())) {
                 response.add(result);
             }
         }

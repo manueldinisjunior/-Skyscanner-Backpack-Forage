@@ -7,6 +7,7 @@ public class Search {
     private String city;
 
     public Search() {
+
     }
 
     public Search(String city) {
@@ -14,7 +15,6 @@ public class Search {
     }
 
     public String getCity() {
-        return this.city;
+        return city;
     }
-
 }
